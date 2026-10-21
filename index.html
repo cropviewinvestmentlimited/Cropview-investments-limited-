@@ -4,101 +4,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cropview Investments Limited | Zambia</title>
-<meta name="description" content="Cropview Investments Limited provides agricultural supply and agribusiness solutions in Zambia.">
+<meta name="theme-color" content="#123d2a">
+<meta name="description" content="Cropview Investments Limited is a Zambian agribusiness company focused on agricultural inputs, marketing, trade, distribution and business partnerships.">
+<title>Cropview Investments Limited | Agribusiness &amp; Trade</title>
 <style>
+:root{--green:#123d2a;--deep:#09291c;--gold:#d5aa45;--cream:#f7f6ef;--white:#fff;--muted:#637268}
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;color:#203329;line-height:1.7}
-header{background:#fff;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;border-bottom:4px solid #d9ac35}
-.brand{font-size:19px;font-weight:bold;color:#15552f}
-nav a{color:#15552f;text-decoration:none;margin:0 7px;font-weight:bold}
-.hero{background:linear-gradient(130deg,#104326,#34834b);color:white;padding:75px 8%}
-.hero h1{font-size:clamp(35px,7vw,58px);line-height:1.15;margin:10px 0}
-.hero p{max-width:650px;font-size:18px}
-.btn{display:inline-block;background:#e1b83f;color:#173b25;padding:12px 22px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:12px}
-section{padding:55px 8%}
-h2{color:#15552f;font-size:30px}
-.services,.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.services{background:#edf5eb}
-.card{background:white;border-radius:10px;padding:24px;box-shadow:0 3px 14px #0000000d}
-.card h3{color:#15552f}
-.contact{background:#f4f7f2}
-a{overflow-wrap:anywhere}
-footer{background:#104326;color:white;text-align:center;padding:25px}
-@media(max-width:600px){header{gap:12px}nav{line-height:2}.hero{padding:55px 6%}section{padding:40px 6%}}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#1c3025;background:var(--white);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:min(1140px,90%);margin:auto}
+header{background:var(--green);color:white;position:sticky;top:0;z-index:10;border-bottom:2px solid var(--gold)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;line-height:1.2}
+.logo{height:47px;width:47px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:25px;font-weight:900}
+.brand small{display:block;font-size:10px;letter-spacing:2px;color:#e8d49c;margin-top:5px}
+nav{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:700}
+nav a:hover{color:var(--gold)}
+.menu{display:none;background:transparent;border:1px solid #ffffff66;color:white;border-radius:6px;padding:8px 12px;font-size:20px}
+.hero{background:linear-gradient(120deg,rgba(9,41,28,.98),rgba(18,61,42,.88)),radial-gradient(circle at 80% 20%,#648b51,#123d2a);color:white;padding:100px 0 105px}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:3px;font-weight:800;text-transform:uppercase}
+h1{font-size:clamp(38px,6vw,68px);line-height:1.08;max-width:780px;margin:20px 0}
+.hero p{font-size:18px;color:#e0e9e0;max-width:650px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 22px;border-radius:5px;font-weight:800;font-size:14px}
+.primary{background:var(--gold);color:#142d1e}
+.secondary{border:1px solid #ffffff99;color:white}
+.section{padding:76px 0}
+.soft{background:var(--cream)}
+.heading{text-align:center;max-width:730px;margin:0 auto 38px}
+.heading h2{font-size:clamp(28px,4vw,40px);line-height:1.2;color:var(--green);margin:10px 0}
+.heading p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{padding:27px;background:white;border:1px solid #e5e9df;border-radius:10px;box-shadow:0 8px 25px #142d1e08}
+.card .symbol{font-size:28px}
+.card h3{color:var(--green);margin:12px 0 8px;font-size:19px}
+.card p{color:var(--muted);margin:0;font-size:15px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about h2{font-size:clamp(30px,4vw,42px);line-height:1.2;color:var(--green)}
+.about p{color:var(--muted)}
+.feature{padding:15px 18px;border-left:3px solid var(--gold);background:var(--cream);margin:12px 0}
+.feature strong{color:var(--green)}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.value{background:white;padding:15px;border-radius:7px;border:1px solid #e5e9df}
+.value strong{display:block;color:var(--green)}
+.value span{font-size:13px;color:var(--muted)}
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:780px;margin:auto}
+.person{background:white;border:1px solid #e5e9df;padding:28px;border-radius:10px;text-align:center}
+.avatar{width:68px;height:68px;margin:auto;border-radius:50%;display:grid;place-items:center;background:var(--green);color:var(--gold);font-size:24px;font-weight:800;border:3px solid #ead59a}
+.person h3{margin:15px 0 2px;color:var(--green)}
+.person p{margin:0;color:var(--muted)}
+.role{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:#a77c20!important;font-weight:800}
+.cta{background:var(--green);color:white;text-align:center;padding:65px 20px}
+.cta h2{font-size:clamp(28px,4vw,40px);margin:10px 0}
+.cta p{color:#dce6dd;max-width:650px;margin:0 auto}
+.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.contact-item{padding:22px;background:var(--cream);border-radius:8px}
+.contact-item strong{display:block;color:var(--green);margin-bottom:5px}
+.contact-item p{margin:0;overflow-wrap:anywhere;color:var(--muted)}
+footer{background:var(--deep);color:#e6eee7;padding:30px 0}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+footer span{color:var(--gold)}
+@media(max-width:800px){
+.menu{display:block}
+nav{display:none;position:absolute;left:0;right:0;top:76px;background:var(--green);padding:20px 5%;flex-direction:column;align-items:flex-start;border-bottom:2px solid var(--gold)}
+nav.open{display:flex}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.about{grid-template-columns:1fr;gap:20px}
+.contact-grid{grid-template-columns:1fr}
+.hero{padding:75px 0}
+}
+@media(max-width:520px){
+.grid,.people{grid-template-columns:1fr}
+.section{padding:55px 0}
+.brand{font-size:13px}
+.logo{height:40px;width:40px}
+.hero p{font-size:16px}
+}
 </style>
 </head>
 <body>
 <header>
-<div class="brand">🌱 CROPVIEW INVESTMENTS LIMITED</div>
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#team">Management</a>
+<div class="container nav">
+<a class="brand" href="#home" aria-label="Cropview Investments home">
+<div class="logo">C</div>
+<div>CROPVIEW INVESTMENTS<small>LIMITED · ZAMBIA</small></div>
+</a>
+<button class="menu" id="menuButton" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+<nav id="navigation">
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#services">Our Services</a>
+<a href="#management">Management</a>
 <a href="#contact">Contact</a>
 </nav>
+</div>
 </header>
 
 <main>
-<div class="hero">
-<p>AGRICULTURE • AGRIBUSINESS • INVESTMENT</p>
-<h1>Investing Today. Cultivating Tomorrow.</h1>
-<p>Growing opportunities through agricultural supply, trusted partnerships and practical agribusiness solutions in Zambia.</p>
-<a class="btn" href="#contact">Contact Our Team</a>
+<section class="hero" id="home">
+<div class="container">
+<div class="eyebrow">Agribusiness · Trade · Partnerships</div>
+<h1>Investing Today.<br><span style="color:#e5bd60">Cultivating Tomorrow.</span></h1>
+<p>Building opportunities across agriculture and commerce through dependable supply, practical business solutions and partnerships that support growth in Zambia.</p>
+<div class="actions">
+<a class="btn primary" href="#services">Explore Our Services ↗</a>
+<a class="btn secondary" href="#contact">Partner With Us</a>
 </div>
-
-<section id="about">
-<h2>About Cropview</h2>
-<p>Cropview Investments Limited is a Zambia-based business focused on agricultural opportunities, agricultural inputs and agribusiness development. We aim to build trusted partnerships and contribute to a productive and sustainable agricultural sector.</p>
-<p>Based in Kitwe, Copperbelt Province, we are committed to connecting businesses and agricultural stakeholders with practical solutions.</p>
-</section>
-
-<section class="services" id="services">
-<div class="card">
-<h3>🌾 Agricultural Inputs</h3>
-<p>Supporting access to fertilizer and other agricultural inputs for farming and agribusiness needs.</p>
-</div>
-<div class="card">
-<h3>🤝 Agribusiness & Trade</h3>
-<p>Building commercial partnerships and exploring opportunities across agricultural value chains.</p>
-</div>
-<div class="card">
-<h3>📈 Agricultural Marketing</h3>
-<p>Connecting agricultural products, markets and business opportunities.</p>
 </div>
 </section>
 
-<section id="team">
-<h2>Our Management</h2>
-<div class="team">
-<div class="card">
+<section class="section" id="about">
+<div class="container about">
+<div>
+<div class="eyebrow">Who We Are</div>
+<h2>Growing business. Creating opportunity.</h2>
+<p>Cropview Investments Limited is a Zambian business focused on agribusiness, agricultural marketing, trade and supply opportunities. We aim to connect businesses, suppliers and customers through practical, professional commercial relationships.</p>
+<p>Our approach is built around understanding market needs, identifying opportunities and developing partnerships that can create sustainable value.</p>
+<a class="btn primary" href="#contact">Talk to Our Team</a>
+</div>
+<div>
+<div class="feature"><strong>Our Mission</strong><br>To pursue practical agribusiness and trading solutions that create value for customers, suppliers and partners.</div>
+<div class="feature"><strong>Our Vision</strong><br>To grow into a trusted Zambian investment and agribusiness company known for integrity, opportunity and dependable service.</div>
+<div class="feature"><strong>Our Approach</strong><br>Build strong relationships, understand customer needs and pursue opportunities responsibly.</div>
+</div>
+</div>
+</section>
+
+<section class="section soft" id="services">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">What We Do</div>
+<h2>Our Business Areas</h2>
+<p>Exploring practical opportunities in agriculture, supply, marketing and commercial development.</p>
+</div>
+<div class="grid">
+<article class="card"><div class="symbol">🌱</div><h3>Agricultural Inputs</h3><p>Supply opportunities involving fertilisers and other agricultural inputs, subject to supplier arrangements and product availability.</p></article>
+<article class="card"><div class="symbol">🚜</div><h3>Agribusiness &amp; Trade</h3><p>Connecting agricultural markets and exploring trade opportunities across the agricultural value chain.</p></article>
+<article class="card"><div class="symbol">📈</div><h3>Agricultural Marketing</h3><p>Market-oriented approaches to product promotion, customer engagement and commercial growth.</p></article>
+<article class="card"><div class="symbol">📦</div><h3>Supply &amp; Distribution</h3><p>Developing supplier relationships and coordinating supply opportunities to serve business and customer needs.</p></article>
+<article class="card"><div class="symbol">🤝</div><h3>Supplier Partnerships</h3><p>Building commercial relationships with suppliers, producers, distributors and potential business partners.</p></article>
+<article class="card"><div class="symbol">💼</div><h3>Business Development</h3><p>Identifying new markets, assessing commercial opportunities and supporting long-term business relationships.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container about">
+<div>
+<div class="eyebrow">Our Principles</div>
+<h2>Business built on trust.</h2>
+<p>We believe long-term growth comes from professional conduct, clear communication and partnerships where all parties understand their responsibilities.</p>
+</div>
+<div class="values">
+<div class="value"><strong>Integrity</strong><span>Honest and responsible dealings.</span></div>
+<div class="value"><strong>Reliability</strong><span>Commitment to clear communication.</span></div>
+<div class="value"><strong>Partnership</strong><span>Mutual value and collaboration.</span></div>
+<div class="value"><strong>Growth</strong><span>Continuous learning and opportunity.</span></div>
+</div>
+</div>
+</section>
+
+<section class="section soft" id="management">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">Our Leadership</div>
+<h2>Management Team</h2>
+<p>Guided by a shared commitment to developing Cropview Investments Limited.</p>
+</div>
+<div class="people">
+<div class="person">
+<div class="avatar">CC</div>
 <h3>Chewe Chanda</h3>
-<p><strong>Overall Head</strong></p>
-<p>Leading the company's strategic direction, business development and operations.</p>
+<p class="role">Overall Head</p>
+<p>Overall leadership and business direction.</p>
 </div>
-<div class="card">
+<div class="person">
+<div class="avatar">FC</div>
 <h3>Francis Chinoya</h3>
-<p><strong>Co-Founder</strong></p>
-<p>Supporting the company's vision, partnerships and growth initiatives.</p>
+<p class="role">Co-Founder</p>
+<p>Co-founding the company and supporting its development.</p>
+</div>
 </div>
 </div>
 </section>
 
-<section class="contact" id="contact">
-<h2>Let's Grow Together</h2>
-<p>Contact us to discuss agricultural supply, trade and business partnerships.</p>
-<p><strong>Location:</strong> Kitwe, Copperbelt Province, Zambia</p>
-<p><strong>Email:</strong> <a href="mailto:cropviewinvestment@info.zm">cropviewinvestment@info.zm</a></p>
-<p><strong>Phone:</strong> <a href="tel:+260974560984">+260 974 560 984</a></p>
-<a class="btn" href="mailto:cropviewinvestment@info.zm?subject=Cropview%20Business%20Enquiry">Send an Enquiry</a>
+<section class="cta">
+<div class="eyebrow">Let's Work Together</div>
+<h2>Have a business opportunity?</h2>
+<p>Contact Cropview Investments Limited to discuss supply enquiries, potential partnerships and agribusiness opportunities.</p>
+<div class="actions" style="justify-content:center">
+<a class="btn primary" href="https://wa.me/260974560984" target="_blank" rel="noopener">Chat With Us on WhatsApp</a>
+<a class="btn secondary" href="mailto:cropviewinvestment@info.zm">Email Our Team</a>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">Get in Touch</div>
+<h2>Contact Cropview</h2>
+<p>We welcome enquiries from customers, suppliers and potential business partners.</p>
+</div>
+<div class="contact-grid">
+<div class="contact-item"><strong>✉ Email</strong><p><a href="mailto:cropviewinvestment@info.zm">cropviewinvestment@info.zm</a></p></div>
+<div class="contact-item"><strong>☎ Phone</strong><p><a href="tel:+260974560984">+260 974 560 984</a><br><a href="tel:+260965081441">+260 965 081 441</a></p></div>
+<div class="contact-item"><strong>⌖ Location</strong><p>Plot No. 384, Ndeke AMIS,<br>Kitwe, Copperbelt Province, Zambia</p></div>
+</div>
+</div>
 </section>
 </main>
 
 <footer>
-<strong>Cropview Investments Limited</strong>
-<p>Investing Today • Cultivating Tomorrow</p>
-<p>© 2026 Cropview Investments Limited. All rights reserved.</p>
+<div class="container footer-row">
+<div><strong>CROPVIEW INVESTMENTS LIMITED</strong><br><span>Investing Today. Cultivating Tomorrow.</span></div>
+<div>© <span id="year"></span> Cropview Investments Limited. All rights reserved.</div>
+</div>
 </footer>
+
+<script>
+const menuButton = document.getElementById('menuButton');
+const navigation = document.getElementById('navigation');
+menuButton.addEventListener('click', () => {
+const isOpen = navigation.classList.toggle('open');
+menuButton.setAttribute('aria-expanded', String(isOpen));
+});
+navigation.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', () => {
+navigation.classList.remove('open');
+menuButton.setAttribute('aria-expanded', 'false');
+});
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
