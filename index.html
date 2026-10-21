@@ -2,839 +2,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#123d28">
-
-  <title>Cropview Investments Limited | Growing Opportunities</title>
-
-  <meta name="description" content="Cropview Investments Limited is a Zambian investment and agribusiness company based in Kitwe, Copperbelt Province. Investing Today, Cultivating Tomorrow.">
-
-  <style>
-    :root {
-      --green: #123d28;
-      --deep-green: #092b1b;
-      --light-green: #eaf4e9;
-      --gold: #d8ad4c;
-      --white: #ffffff;
-      --text: #24352b;
-      --muted: #657268;
-      --background: #f7f9f5;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--background);
-      line-height: 1.7;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .container {
-      width: min(1120px, 90%);
-      margin: auto;
-    }
-
-    header {
-      background: var(--white);
-      border-bottom: 1px solid #e4eae2;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .navbar {
-      min-height: 86px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-    }
-
-    .brand img {
-      width: 65px;
-      height: 65px;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .brand-name {
-      font-size: 17px;
-      font-weight: 800;
-      line-height: 1.25;
-      color: var(--green);
-    }
-
-    .brand-tagline {
-      color: var(--muted);
-      font-size: 11px;
-      margin-top: 4px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 22px;
-      align-items: center;
-    }
-
-    nav a {
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    nav a:hover {
-      color: #9a731f;
-    }
-
-    .nav-contact {
-      background: var(--green);
-      color: var(--white);
-      padding: 10px 16px;
-      border-radius: 5px;
-    }
-
-    .hero {
-      background:
-        linear-gradient(110deg, rgba(5, 35, 20, .97), rgba(18, 61, 40, .88));
-      color: var(--white);
-      padding: 100px 0 95px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 330px;
-      height: 330px;
-      border: 1px solid rgba(216, 173, 76, .25);
-      border-radius: 50%;
-      right: -100px;
-      bottom: -180px;
-    }
-
-    .hero-content {
-      max-width: 760px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: clamp(36px, 6vw, 64px);
-      line-height: 1.12;
-      margin-bottom: 22px;
-      letter-spacing: -1.5px;
-    }
-
-    .hero p {
-      max-width: 650px;
-      font-size: 17px;
-      color: #e0e9e1;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 5px;
-      font-weight: 700;
-      font-size: 14px;
-      transition: transform .2s, background .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #172d1d;
-    }
-
-    .btn-outline {
-      border: 1px solid rgba(255,255,255,.65);
-      color: var(--white);
-    }
-
-    .section {
-      padding: 78px 0;
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 35px;
-    }
-
-    .section-heading .eyebrow {
-      color: #947020;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      color: var(--green);
-      font-size: clamp(28px, 4vw, 40px);
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-
-    .section-heading p,
-    .about-copy p {
-      color: var(--muted);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .about-panel {
-      background: var(--light-green);
-      padding: 34px;
-      border-left: 5px solid var(--gold);
-      border-radius: 5px;
-    }
-
-    .about-panel h3 {
-      color: var(--green);
-      font-size: 23px;
-      margin-bottom: 12px;
-    }
-
-    .about-panel p {
-      color: #4d6052;
-    }
-
-    .values {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .value {
-      background: white;
-      padding: 16px;
-      border-radius: 5px;
-      border: 1px solid #e5ebe2;
-    }
-
-    .value strong {
-      display: block;
-      color: var(--green);
-      margin-bottom: 3px;
-    }
-
-    .value span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .services {
-      background: #eef3ec;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: white;
-      border: 1px solid #e2e9df;
-      border-radius: 7px;
-      padding: 27px 23px;
-      border-bottom: 3px solid var(--gold);
-    }
-
-    .service-number {
-      color: #a47d28;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .service-card h3 {
-      color: var(--green);
-      font-size: 19px;
-      margin: 12px 0 9px;
-    }
-
-    .service-card p {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .management-intro {
-      max-width: 680px;
-      color: var(--muted);
-      margin-bottom: 32px;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 25px;
-      max-width: 850px;
-    }
-
-    .team-card {
-      background: white;
-      border: 1px solid #e4eae2;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 8px 28px rgba(18, 61, 40, .05);
-    }
-
-    .portrait {
-      height: 320px;
-      background: #e6eee4;
-      overflow: hidden;
-    }
-
-    .portrait img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-    }
-
-    .portrait-placeholder {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #123d28, #356849);
-      color: var(--gold);
-      font-size: 55px;
-      font-weight: 800;
-    }
-
-    .team-info {
-      padding: 23px;
-    }
-
-    .team-info h3 {
-      color: var(--green);
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
-
-    .role {
-      color: #997323;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .team-info p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .contact {
-      background: var(--deep-green);
-      color: white;
-    }
-
-    .contact h2 {
-      color: white;
-    }
-
-    .contact .section-heading p {
-      color: #d5e1d6;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-    }
-
-    .contact-details {
-      display: grid;
-      gap: 16px;
-    }
-
-    .contact-item {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.13);
-      padding: 19px;
-      border-radius: 5px;
-    }
-
-    .contact-item strong {
-      display: block;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-
-    .contact-item a,
-    .contact-item span {
-      overflow-wrap: anywhere;
-      color: #edf4ed;
-    }
-
-    .contact-message {
-      padding: 30px;
-      background: rgba(255,255,255,.06);
-      border-radius: 7px;
-      border: 1px solid rgba(255,255,255,.13);
-    }
-
-    .contact-message h3 {
-      font-size: 24px;
-      margin-bottom: 12px;
-    }
-
-    .contact-message p {
-      color: #d5e1d6;
-      margin-bottom: 22px;
-    }
-
-    footer {
-      background: #061c11;
-      color: #c7d4c9;
-      padding: 24px 0;
-      font-size: 12px;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .footer-brand {
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    @media (max-width: 800px) {
-      .navbar {
-        padding: 12px 0;
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      nav {
-        gap: 12px 18px;
-      }
-
-      .hero {
-        padding: 72px 0;
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 540px) {
-      .brand img {
-        width: 54px;
-        height: 54px;
-      }
-
-      .brand-name {
-        font-size: 15px;
-      }
-
-      nav {
-        gap: 10px 14px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      .service-grid,
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 58px 0;
-      }
-
-      .portrait {
-        height: 350px;
-      }
-
-      .values {
-        grid-template-columns: 1fr;
-      }
-
-      .about-panel {
-        padding: 24px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123d28">
+<title>Cropview Investments Limited | Growing Opportunities</title>
+<meta name="description" content="Cropview Investments Limited is a Zambian investment and agribusiness company based in Kitwe, Copperbelt Province. Investing Today, Cultivating Tomorrow.">
+
+<style>
+:root {
+  --green:#123d28;
+  --deep:#082619;
+  --gold:#d8ad4c;
+  --light:#edf4e9;
+  --text:#26382c;
+  --muted:#647368;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.7;background:#fafbf8}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{width:min(1160px,90%);margin:auto}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:white;box-shadow:0 3px 18px #0000000b}
+.navbar{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand img{width:65px;height:65px;object-fit:contain;flex-shrink:0}
+.brand-name{display:block;font-size:16px;font-weight:800;color:var(--green);line-height:1.3}
+.brand-tagline{display:block;font-size:11px;color:var(--muted);margin-top:4px}
+nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+nav a{font-size:13px;font-weight:700}
+nav a:hover{color:#a57b24}
+.nav-contact{background:var(--green);color:white;padding:10px 15px;border-radius:5px}
+
+/* HERO */
+.hero{
+  position:relative;
+  min-height:570px;
+  display:flex;
+  align-items:center;
+  color:white;
+  background:
+    linear-gradient(90deg,rgba(4,29,17,.92) 0%,rgba(7,40,22,.76) 52%,rgba(7,40,22,.25) 100%),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center 52%/cover no-repeat;
+}
+.hero-content{position:relative;z-index:1;max-width:760px;padding:95px 0}
+.eyebrow{display:inline-block;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:13px}
+h1{font-size:clamp(38px,6vw,67px);line-height:1.1;letter-spacing:-1.5px;margin-bottom:23px}
+.hero p{max-width:650px;color:#eef3ed;font-size:17px;margin-bottom:30px}
+.buttons{display:flex;gap:13px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:5px;font-size:14px;font-weight:800;transition:.2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:var(--gold);color:#152b1c}
+.btn-outline{border:1px solid white;color:white}
+.hero-note{margin-top:34px;display:flex;gap:25px;flex-wrap:wrap;color:#f3f5ef;font-size:13px}
+.hero-note span:before{content:"✓";color:var(--gold);font-weight:bold;margin-right:8px}
+
+/* GENERAL SECTIONS */
+.section{padding:82px 0}
+.section-heading{max-width:740px;margin-bottom:36px}
+.section-heading .eyebrow{color:#96701f}
+h2{font-size:clamp(29px,4vw,42px);line-height:1.2;color:var(--green);margin-bottom:15px}
+.section-heading p,.about-copy p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-photo{height:440px;position:relative;border-radius:9px;overflow:hidden}
+.about-photo img{width:100%;height:100%;object-fit:cover}
+.photo-caption{position:absolute;bottom:20px;left:20px;right:20px;background:#092b1be8;color:white;padding:18px 20px;border-left:4px solid var(--gold);border-radius:4px}
+.photo-caption strong{display:block;font-size:17px}
+.photo-caption span{font-size:13px;color:#e1e9df}
+.about-panel{margin-top:25px;background:var(--light);padding:28px;border-left:5px solid var(--gold);border-radius:5px}
+.about-panel h3{font-size:22px;color:var(--green);margin-bottom:8px}
+.about-panel p{color:#4d6052}
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.value{padding:15px;background:white;border:1px solid #e1e9df;border-radius:5px}
+.value strong{display:block;color:var(--green)}
+.value span{font-size:12px;color:var(--muted)}
+
+/* IMAGE STRIP */
+.image-strip{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:15px;margin-top:40px}
+.image-tile{height:225px;position:relative;border-radius:7px;overflow:hidden;background:#e2eadd}
+.image-tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.image-tile:hover img{transform:scale(1.06)}
+.image-tile span{position:absolute;left:0;right:0;bottom:0;padding:35px 17px 15px;color:white;font-weight:800;background:linear-gradient(transparent,#061b10d9)}
+
+/* SERVICES */
+.services{background:#eef3ec}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card{background:white;border:1px solid #e2e9df;border-radius:8px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.service-card:hover{transform:translateY(-5px);box-shadow:0 12px 30px #123d2812}
+.service-image{height:190px;overflow:hidden;background:#dce7d8}
+.service-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.service-card:hover .service-image img{transform:scale(1.05)}
+.service-body{padding:23px;border-bottom:3px solid var(--gold)}
+.service-number{font-size:11px;letter-spacing:1px;color:#a47d28;font-weight:800}
+.service-body h3{font-size:19px;color:var(--green);margin:9px 0}
+.service-body p{font-size:14px;color:var(--muted)}
+
+/* MANAGEMENT */
+.management-intro{max-width:680px;color:var(--muted);margin-bottom:30px}
+.team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;max-width:900px}
+.team-card{background:white;border:1px solid #e4eae2;border-radius:9px;overflow:hidden;box-shadow:0 8px 28px #123d280b}
+.portrait{height:350px;background:#e6eee4;overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.portrait-placeholder{height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#123d28,#4b7958);color:var(--gold);font-size:58px;font-weight:800}
+.team-info{padding:24px}
+.team-info h3{font-size:22px;color:var(--green)}
+.role{font-size:13px;font-weight:800;color:#997323;margin-bottom:12px}
+.team-info p{font-size:14px;color:var(--muted)}
+
+/* CONTACT */
+.contact{background:var(--deep);color:white}
+.contact h2{color:white}
+.contact .section-heading p{color:#d5e1d6}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.contact-details{display:grid;gap:15px}
+.contact-item{background:#ffffff0c;border:1px solid #ffffff20;padding:20px;border-radius:6px}
+.contact-item strong{display:block;color:var(--gold);margin-bottom:5px}
+.contact-item a,.contact-item span{color:#edf4ed;overflow-wrap:anywhere}
+.contact-item a:hover{color:var(--gold)}
+.contact-message{padding:30px;background:#ffffff0c;border:1px solid #ffffff20;border-radius:7px}
+.contact-message h3{font-size:24px;margin-bottom:12px}
+.contact-message p{color:#d5e1d6;margin-bottom:22px}
+
+/* FOOTER */
+footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
+.footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-brand{color:var(--gold);font-weight:800}
+
+@media(max-width:850px){
+ .navbar{padding:12px 0;align-items:flex-start;flex-direction:column}
+ nav{gap:12px 17px}
+ .hero{min-height:520px}
+ .about-grid,.contact-grid{grid-template-columns:1fr}
+ .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .about-photo{height:370px}
+}
+@media(max-width:560px){
+ .container{width:91%}
+ .brand img{width:53px;height:53px}
+ .brand-name{font-size:13px}
+ .brand-tagline{font-size:10px}
+ nav{gap:10px 13px}
+ nav a{font-size:12px}
+ .nav-contact{padding:7px 10px}
+ .hero{min-height:560px;background-position:58% center}
+ .hero-content{padding:70px 0}
+ .hero p{font-size:15px}
+ .section{padding:59px 0}
+ .service-grid,.team-grid{grid-template-columns:1fr}
+ .image-strip{grid-template-columns:1fr}
+ .image-tile{height:220px}
+ .portrait{height:370px}
+ .values{grid-template-columns:1fr}
+ .about-panel{padding:22px}
+ .about-photo{height:340px}
+ .footer-content{align-items:flex-start;flex-direction:column}
+}
+</style>
 </head>
 
 <body>
+<header>
+  <div class="container navbar">
+    <a class="brand" href="#home" aria-label="Cropview Investments Limited home">
+      <img
+        src="https://raw.githubusercontent.com/cropviewinvestmentlimited/Cropview-investments-limited-/main/707DA0CC-C963-4BC0-95F7-501455C315CE.jpeg"
+        alt="Cropview Investments Limited logo"
+        onerror="this.style.display='none'">
+      <span>
+        <span class="brand-name">CROPVIEW INVESTMENTS LIMITED</span>
+        <span class="brand-tagline">Investing Today • Cultivating Tomorrow</span>
+      </span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Our Services</a>
+      <a href="#management">Management</a>
+      <a class="nav-contact" href="#contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
 
-  <header>
-    <div class="container navbar">
-      <a class="brand" href="#home" aria-label="Cropview Investments Limited home">
-        <img src="assets/cropview-logo.png"
-             alt="Cropview Investments Limited logo">
-        <span>
-          <span class="brand-name">CROPVIEW INVESTMENTS LIMITED</span>
-          <span class="brand-tagline">Investing Today • Cultivating Tomorrow</span>
-        </span>
-      </a>
-
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Our Services</a>
-        <a href="#management">Management</a>
-        <a class="nav-contact" href="#contact">Contact Us</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-          <span class="eyebrow">Rooted in Opportunity</span>
-
-          <h1>Growing Business.<br>Creating Opportunities.</h1>
-
-          <p>
-            Cropview Investments Limited is a Zambian company focused on
-            identifying opportunities, building business relationships
-            and contributing to sustainable economic growth. We believe
-            in practical solutions, strong partnerships and a future
-            built on purposeful investment.
-          </p>
-
-          <div class="buttons">
-            <a class="btn btn-gold" href="#services">Explore Our Services</a>
-            <a class="btn btn-outline" href="#contact">Partner With Us</a>
-          </div>
-        </div>
+<main>
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow">Rooted in Opportunity</span>
+      <h1>Growing Business.<br>Creating Opportunities.</h1>
+      <p>Cropview Investments Limited is a Zambian company focused on agribusiness, investment opportunities, commercial partnerships and sustainable growth. We connect ideas with opportunity and relationships with results.</p>
+      <div class="buttons">
+        <a class="btn btn-gold" href="#services">Explore Our Services</a>
+        <a class="btn btn-outline" href="#contact">Partner With Us</a>
       </div>
-    </section>
+      <div class="hero-note">
+        <span>Based in Kitwe, Zambia</span>
+        <span>Built on Partnerships</span>
+        <span>Focused on Growth</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="section" id="about">
-      <div class="container about-grid">
-
-        <div class="about-copy">
-          <div class="section-heading">
-            <span class="eyebrow">Who We Are</span>
-            <h2>Building Value Through Investment</h2>
-            <p>
-              Cropview Investments Limited is based in Kitwe,
-              Copperbelt Province, Zambia. Our vision is to build a
-              respected and dependable business that connects
-              opportunities with practical commercial solutions.
-            </p>
-          </div>
-
-          <p>
-            We value integrity, innovation, collaboration and long-term
-            relationships. We aim to work with clients, suppliers,
-            business partners and other stakeholders to explore
-            opportunities that create mutual value.
-          </p>
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <div class="section-heading">
+          <span class="eyebrow">Who We Are</span>
+          <h2>Building Value Through Investment</h2>
+          <p>Cropview Investments Limited is based in Kitwe, Copperbelt Province, Zambia. We are building a dependable business that connects commercial opportunities with practical solutions.</p>
         </div>
-
+        <p>We value integrity, innovation, collaboration and long-term relationships. Our ambition is to work with clients, suppliers, farmers and business partners to develop opportunities that create mutual value.</p>
         <div class="about-panel">
           <h3>Our Vision</h3>
-          <p>
-            To become a trusted Zambian investment company recognised
-            for responsible business, strong partnerships and
-            sustainable growth.
-          </p>
-
+          <p>To become a trusted Zambian investment company recognised for responsible business, strong partnerships and sustainable growth.</p>
           <div class="values">
-            <div class="value">
-              <strong>Integrity</strong>
-              <span>Honest and accountable business.</span>
-            </div>
-            <div class="value">
-              <strong>Innovation</strong>
-              <span>Finding better ways to create value.</span>
-            </div>
-            <div class="value">
-              <strong>Partnership</strong>
-              <span>Growing through collaboration.</span>
-            </div>
-            <div class="value">
-              <strong>Sustainability</strong>
-              <span>Thinking about long-term impact.</span>
-            </div>
+            <div class="value"><strong>Integrity</strong><span>Honest and accountable business.</span></div>
+            <div class="value"><strong>Innovation</strong><span>Finding better ways to create value.</span></div>
+            <div class="value"><strong>Partnership</strong><span>Growing through collaboration.</span></div>
+            <div class="value"><strong>Sustainability</strong><span>Thinking about long-term impact.</span></div>
           </div>
         </div>
-
       </div>
-    </section>
-
-    <section class="section services" id="services">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow">What We Do</span>
-          <h2>Our Business Areas</h2>
-          <p>
-            We are building a diversified business platform focused
-            on commercial opportunities, practical solutions and
-            lasting relationships.
-          </p>
-        </div>
-
-        <div class="service-grid">
-
-          <article class="service-card">
-            <span class="service-number">01 / INVESTMENT</span>
-            <h3>Investment Opportunities</h3>
-            <p>
-              Exploring commercially viable opportunities, strategic
-              partnerships and projects with potential for sustainable
-              growth.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">02 / AGRIBUSINESS</span>
-            <h3>Agriculture & Agribusiness</h3>
-            <p>
-              Supporting opportunities across agricultural value chains,
-              market linkages and agricultural business development.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">03 / SUPPLY</span>
-            <h3>General Supply & Trade</h3>
-            <p>
-              Developing supplier relationships and exploring the
-              sourcing and supply of products to meet business needs.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">04 / PARTNERSHIPS</span>
-            <h3>Business Development</h3>
-            <p>
-              Connecting with clients, suppliers and partners to identify
-              opportunities and build commercially beneficial
-              relationships.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">05 / MARKETS</span>
-            <h3>Market Linkages</h3>
-            <p>
-              Exploring connections between producers, buyers and
-              enterprises to improve access to markets and opportunities.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">06 / GROWTH</span>
-            <h3>Strategic Collaboration</h3>
-            <p>
-              Welcoming discussions with organisations and entrepreneurs
-              interested in responsible ventures and mutually beneficial
-              business relationships.
-            </p>
-          </article>
-
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1100&q=85" alt="Wide agricultural landscape with cultivated fields" loading="lazy">
+        <div class="photo-caption">
+          <strong>Investing Today. Cultivating Tomorrow.</strong>
+          <span>Building opportunities across agriculture and commerce.</span>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="management">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow">Our Leadership</span>
-          <h2>Meet the Management Team</h2>
-          <p class="management-intro">
-            Our leadership is committed to building relationships,
-            identifying opportunities and guiding the company's
-            business development.
-          </p>
-        </div>
-
-        <div class="team-grid">
-
-          <article class="team-card">
-            <div class="portrait">
-              <img
-                src="assets/IMG_0777.jpeg"
-                alt="Chewe Chanda, Founder and Managing Director"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-              <div class="portrait-placeholder" style="display:none;">
-                CC
-              </div>
-            </div>
-
-            <div class="team-info">
-              <h3>Chewe Chanda</h3>
-              <div class="role">Founder & Managing Director</div>
-              <p>
-                Provides overall leadership and direction, with a focus
-                on strategy, commercial opportunities, partnerships and
-                the company's long-term development.
-              </p>
-            </div>
-          </article>
-
-          <article class="team-card">
-            <div class="portrait">
-              <div class="portrait-placeholder">FC</div>
-            </div>
-
-            <div class="team-info">
-              <h3>Francis Chinoya</h3>
-              <div class="role">Co-Founder & Operations Manager</div>
-              <p>
-                Supports the company's operational coordination,
-                implementation of business activities and development
-                of effective working relationships.
-              </p>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="eyebrow">Let's Connect</span>
-          <h2>Let's Build Something Together</h2>
-          <p>
-            Interested in working with Cropview Investments Limited?
-            Get in touch to discuss business opportunities, partnerships
-            or general enquiries.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-
-          <div class="contact-details">
-
-            <div class="contact-item">
-              <strong>Email Address</strong>
-              <a href="mailto:cropviewinvestment@info.zm">
-                cropviewinvestment@info.zm
-              </a>
-            </div>
-
-            <div class="contact-item">
-              <strong>Telephone</strong>
-              <a href="tel:+260965081451">+260 965 081 451</a>
-              <br>
-              <a href="tel:+260974560984">+260 974 560 984</a>
-            </div>
-
-            <div class="contact-item">
-              <strong>Location</strong>
-              <span>Kitwe, Copperbelt Province, Zambia</span>
-            </div>
-
-          </div>
-
-          <div class="contact-message">
-            <h3>Have a business opportunity?</h3>
-            <p>
-              We welcome enquiries from prospective clients, suppliers,
-              investors and partners who share an interest in responsible
-              business and long-term growth.
-            </p>
-
-            <a class="btn btn-gold"
-               href="mailto:cropviewinvestment@info.zm?subject=Business%20Enquiry%20-%20Cropview%20Investments%20Limited">
-              Send Us an Email
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container footer-content">
-      <span>
-        © <span id="year">2026</span>
-        Cropview Investments Limited. All rights reserved.
-      </span>
-      <span class="footer-brand">
-        Investing Today • Cultivating Tomorrow
-      </span>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+    <div class="image-strip">
+      <div class="image-tile">
+        <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73ಲ್?auto=format&fit=crop&w=800&q=80" alt="Agricultural crops" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80'">
+        <span>Agriculture & Production</span>
+      </div>
+      <div class="image-tile">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=800&q=85" alt="Fresh crops growing on a farm" loading="lazy">
+        <span>Growing Opportunities</span>
+      </div>
+      <div class="image-tile">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=85" alt="Green farmland and rural landscape" loading="lazy">
+        <span>Sustainable Growth</span>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">What We Do</span>
+      <h2>Our Business Areas</h2>
+      <p>We are developing a diversified business platform focused on commercial opportunities, practical solutions and lasting relationships.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card">
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Expansive farmland" loading="lazy"></div>
+        <div class="service-body"><span class="service-number">01 / INVESTMENT</span><h3>Investment Opportunities</h3><p>Exploring commercially viable opportunities, strategic partnerships and projects with potential for sustainable growth.</p></div>
+      </article>
+      <article class="service-card">
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=85" alt="Healthy crops and agricultural production" loading="lazy"></div>
+        <div class="service-body"><span class="service-number">02 / AGRIBUSINESS</span><h3>Agriculture & Agribusiness</h3><p>Supporting opportunities across agricultural value chains, market linkages and agricultural business development.</p></div>
+      </article>
+      <article class="service-card">
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85" alt="Goods stored and ready for distribution" loading="lazy"></div>
+        <div class="service-body"><span class="service-number">03 / SUPPLY</span><h3>General Supply & Trade</h3><p>Developing supplier relationships and exploring the sourcing and supply of products to meet business needs.</p></div>
+      </article>
+      <article class="service-card">
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Business team collaborating" loading="lazy"></div>
+        <div class="service-body"><span class="service-number">04 / PARTNERSHIPS</span><h3>Business Development</h3><p>Connecting with clients, suppliers and partners to identify opportunities and build commercially beneficial relationships.</p></div>
+      </article>
+      <article class="service-card">
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85" alt="Fresh agricultural produce in a market" loading="lazy"></div>
+        <div class="service-body"><span class="service-number">05 / MARKETS</span><h3>Market Linkages</h3><p>Exploring connections between producers, buyers and enterprises to improve access to markets and opportunities.</p></div>
+      </article>
+      <article class="service-card">
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85" alt="People working together on business planning" loading="lazy"></div>
+        <div class="service-body"><span class="service-number">06 / GROWTH</span><h3>Strategic Collaboration</h3><p>Welcoming discussions with organisations and entrepreneurs interested in responsible ventures and mutually beneficial business relationships.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="management">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Our Leadership</span>
+      <h2>Meet the Management Team</h2>
+      <p class="management-intro">Our leadership is committed to building relationships, identifying opportunities and guiding the company's business development.</p>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="portrait">
+          <img src="assets/IMG_0777.jpeg" alt="Chewe Chanda, Founder and Managing Director" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="portrait-placeholder" style="display:none">CC</div>
+        </div>
+        <div class="team-info">
+          <h3>Chewe Chanda</h3>
+          <div class="role">Founder & Managing Director</div>
+          <p>Provides overall leadership and direction, with a focus on strategy, commercial opportunities, partnerships and the company's long-term development.</p>
+        </div>
+      </article>
+      <article class="team-card">
+        <div class="portrait">
+          <div class="portrait-placeholder">FC</div>
+        </div>
+        <div class="team-info">
+          <h3>Francis Chinoya</h3>
+          <div class="role">Co-Founder & Operations Manager</div>
+          <p>Supports operational coordination, implementation of business activities and development of effective working relationships.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Let's Connect</span>
+      <h2>Let's Build Something Together</h2>
+      <p>Interested in working with Cropview Investments Limited? Contact us to discuss business opportunities, partnerships or general enquiries.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-details">
+        <div class="contact-item"><strong>Email Address</strong><a href="mailto:cropviewinvestment@info.zm">cropviewinvestment@info.zm</a></div>
+        <div class="contact-item"><strong>Telephone</strong><a href="tel:+260965081451">+260 965 081 451</a><br><a href="tel:+260974560984">+260 974 560 984</a></div>
+        <div class="contact-item"><strong>Location</strong><span>Kitwe, Copperbelt Province, Zambia</span></div>
+      </div>
+      <div class="contact-message">
+        <h3>Have a business opportunity?</h3>
+        <p>We welcome enquiries from prospective clients, suppliers, investors and partners who share an interest in responsible business and long-term growth.</p>
+        <a class="btn btn-gold" href="mailto:cropviewinvestment@info.zm?subject=Business%20Enquiry%20-%20Cropview%20Investments%20Limited">Send Us an Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <span>© <span id="year">2026</span> Cropview Investments Limited. All rights reserved.</span>
+    <span class="footer-brand">Investing Today • Cultivating Tomorrow</span>
+  </div>
+</footer>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
