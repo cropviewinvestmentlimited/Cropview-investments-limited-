@@ -39,14 +39,9 @@ nav a:hover{color:#a57b24}
 
 /* HERO */
 .hero{
-  position:relative;
-  min-height:570px;
-  display:flex;
-  align-items:center;
-  color:white;
-  background:
-    linear-gradient(90deg,rgba(4,29,17,.92) 0%,rgba(7,40,22,.76) 52%,rgba(7,40,22,.25) 100%),
-    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center 52%/cover no-repeat;
+  position:relative;min-height:570px;display:flex;align-items:center;color:white;
+  background:linear-gradient(90deg,rgba(4,29,17,.92) 0%,rgba(7,40,22,.76) 52%,rgba(7,40,22,.25) 100%),
+  url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center 52%/cover no-repeat;
 }
 .hero-content{position:relative;z-index:1;max-width:760px;padding:95px 0}
 .eyebrow{display:inline-block;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:13px}
@@ -112,6 +107,13 @@ h2{font-size:clamp(29px,4vw,42px);line-height:1.2;color:var(--green);margin-bott
 .role{font-size:13px;font-weight:800;color:#997323;margin-bottom:12px}
 .team-info p{font-size:14px;color:var(--muted)}
 
+/* CAREERS */
+.careers{background:#f2f6ef}
+.career-panel{background:white;border:1px solid #e0e8dc;border-radius:9px;padding:28px;border-left:5px solid var(--gold);max-width:850px}
+.career-panel h3{color:var(--green);font-size:22px;margin-bottom:8px}
+.career-panel p{color:var(--muted);margin-bottom:15px}
+.career-status{display:inline-block;background:#edf4e9;color:var(--green);font-size:12px;font-weight:800;padding:5px 10px;border-radius:20px;margin-bottom:12px}
+
 /* CONTACT */
 .contact{background:var(--deep);color:white}
 .contact h2{color:white}
@@ -125,6 +127,8 @@ h2{font-size:clamp(29px,4vw,42px);line-height:1.2;color:var(--green);margin-bott
 .contact-message{padding:30px;background:#ffffff0c;border:1px solid #ffffff20;border-radius:7px}
 .contact-message h3{font-size:24px;margin-bottom:12px}
 .contact-message p{color:#d5e1d6;margin-bottom:22px}
+.btn-whatsapp{background:#25D366;color:#062b17;display:inline-block}
+.btn-whatsapp:hover{background:#49df7e}
 
 /* FOOTER */
 footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
@@ -167,10 +171,7 @@ footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
 <header>
   <div class="container navbar">
     <a class="brand" href="#home" aria-label="Cropview Investments Limited home">
-      <img
-        src="https://raw.githubusercontent.com/cropviewinvestmentlimited/Cropview-investments-limited-/main/707DA0CC-C963-4BC0-95F7-501455C315CE.jpeg"
-        alt="Cropview Investments Limited logo"
-        onerror="this.style.display='none'">
+      <img src="https://raw.githubusercontent.com/cropviewinvestmentlimited/Cropview-investments-limited-/main/707DA0CC-C963-4BC0-95F7-501455C315CE.jpeg" alt="Cropview Investments Limited logo" onerror="this.style.display='none'">
       <span>
         <span class="brand-name">CROPVIEW INVESTMENTS LIMITED</span>
         <span class="brand-tagline">Investing Today • Cultivating Tomorrow</span>
@@ -181,6 +182,7 @@ footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
       <a href="#about">About Us</a>
       <a href="#services">Our Services</a>
       <a href="#management">Management</a>
+      <a href="#careers">Careers</a>
       <a class="nav-contact" href="#contact">Contact Us</a>
     </nav>
   </div>
@@ -188,22 +190,20 @@ footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
 
 <main>
 <section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <span class="eyebrow">Rooted in Opportunity</span>
-      <h1>Growing Business.<br>Creating Opportunities.</h1>
-      <p>Cropview Investments Limited is a Zambian company focused on agribusiness, investment opportunities, commercial partnerships and sustainable growth. We connect ideas with opportunity and relationships with results.</p>
-      <div class="buttons">
-        <a class="btn btn-gold" href="#services">Explore Our Services</a>
-        <a class="btn btn-outline" href="#contact">Partner With Us</a>
-      </div>
-      <div class="hero-note">
-        <span>Based in Kitwe, Zambia</span>
-        <span>Built on Partnerships</span>
-        <span>Focused on Growth</span>
-      </div>
+  <div class="container"><div class="hero-content">
+    <span class="eyebrow">Rooted in Opportunity</span>
+    <h1>Growing Business.<br>Creating Opportunities.</h1>
+    <p>Cropview Investments Limited is a Zambian company focused on agribusiness, investment opportunities, commercial partnerships and sustainable growth. We connect ideas with opportunity and relationships with results.</p>
+    <div class="buttons">
+      <a class="btn btn-gold" href="#services">Explore Our Services</a>
+      <a class="btn btn-outline" href="#contact">Partner With Us</a>
     </div>
-  </div>
+    <div class="hero-note">
+      <span>Based in Kitwe, Zambia</span>
+      <span>Built on Partnerships</span>
+      <span>Focused on Growth</span>
+    </div>
+  </div></div>
 </section>
 
 <section class="section" id="about">
@@ -229,16 +229,13 @@ footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
       </div>
       <div class="about-photo">
         <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1100&q=85" alt="Wide agricultural landscape with cultivated fields" loading="lazy">
-        <div class="photo-caption">
-          <strong>Investing Today. Cultivating Tomorrow.</strong>
-          <span>Building opportunities across agriculture and commerce.</span>
-        </div>
+        <div class="photo-caption"><strong>Investing Today. Cultivating Tomorrow.</strong><span>Building opportunities across agriculture and commerce.</span></div>
       </div>
     </div>
 
     <div class="image-strip">
       <div class="image-tile">
-        <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73ಲ್?auto=format&fit=crop&w=800&q=80" alt="Agricultural crops" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80'">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Agricultural crops" loading="lazy">
         <span>Agriculture & Production</span>
       </div>
       <div class="image-tile">
@@ -261,30 +258,12 @@ footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
       <p>We are developing a diversified business platform focused on commercial opportunities, practical solutions and lasting relationships.</p>
     </div>
     <div class="service-grid">
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Expansive farmland" loading="lazy"></div>
-        <div class="service-body"><span class="service-number">01 / INVESTMENT</span><h3>Investment Opportunities</h3><p>Exploring commercially viable opportunities, strategic partnerships and projects with potential for sustainable growth.</p></div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=85" alt="Healthy crops and agricultural production" loading="lazy"></div>
-        <div class="service-body"><span class="service-number">02 / AGRIBUSINESS</span><h3>Agriculture & Agribusiness</h3><p>Supporting opportunities across agricultural value chains, market linkages and agricultural business development.</p></div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85" alt="Goods stored and ready for distribution" loading="lazy"></div>
-        <div class="service-body"><span class="service-number">03 / SUPPLY</span><h3>General Supply & Trade</h3><p>Developing supplier relationships and exploring the sourcing and supply of products to meet business needs.</p></div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Business team collaborating" loading="lazy"></div>
-        <div class="service-body"><span class="service-number">04 / PARTNERSHIPS</span><h3>Business Development</h3><p>Connecting with clients, suppliers and partners to identify opportunities and build commercially beneficial relationships.</p></div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85" alt="Fresh agricultural produce in a market" loading="lazy"></div>
-        <div class="service-body"><span class="service-number">05 / MARKETS</span><h3>Market Linkages</h3><p>Exploring connections between producers, buyers and enterprises to improve access to markets and opportunities.</p></div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85" alt="People working together on business planning" loading="lazy"></div>
-        <div class="service-body"><span class="service-number">06 / GROWTH</span><h3>Strategic Collaboration</h3><p>Welcoming discussions with organisations and entrepreneurs interested in responsible ventures and mutually beneficial business relationships.</p></div>
-      </article>
+      <article class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85" alt="Expansive farmland" loading="lazy"></div><div class="service-body"><span class="service-number">01 / INVESTMENT</span><h3>Investment Opportunities</h3><p>Exploring commercially viable opportunities, strategic partnerships and projects with potential for sustainable growth.</p></div></article>
+      <article class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=85" alt="Healthy crops and agricultural production" loading="lazy"></div><div class="service-body"><span class="service-number">02 / AGRIBUSINESS</span><h3>Agriculture & Agribusiness</h3><p>Supporting opportunities across agricultural value chains, market linkages and agricultural business development.</p></div></article>
+      <article class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85" alt="Goods stored and ready for distribution" loading="lazy"></div><div class="service-body"><span class="service-number">03 / SUPPLY</span><h3>General Supply & Trade</h3><p>Developing supplier relationships and exploring the sourcing and supply of products to meet business needs.</p></div></article>
+      <article class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Business team collaborating" loading="lazy"></div><div class="service-body"><span class="service-number">04 / PARTNERSHIPS</span><h3>Business Development</h3><p>Connecting with clients, suppliers and partners to identify opportunities and build commercially beneficial relationships.</p></div></article>
+      <article class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=85" alt="Fresh agricultural produce in a market" loading="lazy"></div><div class="service-body"><span class="service-number">05 / MARKETS</span><h3>Market Linkages</h3><p>Exploring connections between producers, buyers and enterprises to improve access to markets and opportunities.</p></div></article>
+      <article class="service-card"><div class="service-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85" alt="People working together on business planning" loading="lazy"></div><div class="service-body"><span class="service-number">06 / GROWTH</span><h3>Strategic Collaboration</h3><p>Welcoming discussions with organisations and entrepreneurs interested in responsible ventures and mutually beneficial business relationships.</p></div></article>
     </div>
   </div>
 </section>
@@ -302,22 +281,30 @@ footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
           <img src="assets/IMG_0777.jpeg" alt="Chewe Chanda, Founder and Managing Director" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="portrait-placeholder" style="display:none">CC</div>
         </div>
-        <div class="team-info">
-          <h3>Chewe Chanda</h3>
-          <div class="role">Founder & Managing Director</div>
-          <p>Provides overall leadership and direction, with a focus on strategy, commercial opportunities, partnerships and the company's long-term development.</p>
-        </div>
+        <div class="team-info"><h3>Chewe Chanda</h3><div class="role">Founder & Managing Director</div><p>Provides overall leadership and direction, with a focus on strategy, commercial opportunities, partnerships and the company's long-term development.</p></div>
       </article>
       <article class="team-card">
-        <div class="portrait">
-          <div class="portrait-placeholder">FC</div>
-        </div>
-        <div class="team-info">
-          <h3>Francis Chinoya</h3>
-          <div class="role">Co-Founder & Operations Manager</div>
-          <p>Supports operational coordination, implementation of business activities and development of effective working relationships.</p>
-        </div>
+        <div class="portrait"><div class="portrait-placeholder">FC</div></div>
+        <div class="team-info"><h3>Francis Chinoya</h3><div class="role">Co-Founder & Operations Manager</div><p>Supports operational coordination, implementation of business activities and development of effective working relationships.</p></div>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS SECTION -->
+<section class="section careers" id="careers">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Join Our Team</span>
+      <h2>Careers at Cropview</h2>
+      <p>We welcome talented, motivated people who want to contribute to business growth, agriculture and commercial opportunities in Zambia.</p>
+    </div>
+    <div class="career-panel">
+      <span class="career-status">Current vacancies: None posted</span>
+      <h3>Build your future with Cropview</h3>
+      <p>When job opportunities become available, we will advertise the position, responsibilities, qualifications and application deadline in this section. Please check back for updates.</p>
+      <p>For general career enquiries, email your CV and a brief introduction to <a href="mailto:cropviewinvestment@info.zm"><strong>cropviewinvestment@info.zm</strong></a> with the subject line <strong>Career Enquiry - Cropview Investments Limited</strong>. Sending a CV is not an application for a specific vacancy unless one has been advertised.</p>
+      <a class="btn btn-gold" href="mailto:cropviewinvestment@info.zm?subject=Career%20Enquiry%20-%20Cropview%20Investments%20Limited">Send a Career Enquiry</a>
     </div>
   </div>
 </section>
@@ -332,13 +319,16 @@ footer{background:#06190f;color:#c7d4c9;padding:25px 0;font-size:12px}
     <div class="contact-grid">
       <div class="contact-details">
         <div class="contact-item"><strong>Email Address</strong><a href="mailto:cropviewinvestment@info.zm">cropviewinvestment@info.zm</a></div>
-        <div class="contact-item"><strong>Telephone</strong><a href="tel:+260965081451">+260 965 081 451</a><br><a href="tel:+260974560984">+260 974 560 984</a></div>
+        <div class="contact-item"><strong>Telephone</strong><a href="tel:+260965081441">+260 965 081 441</a><br><a href="tel:+260974560984">+260 974 560 984</a></div>
         <div class="contact-item"><strong>Location</strong><span>Kitwe, Copperbelt Province, Zambia</span></div>
       </div>
       <div class="contact-message">
         <h3>Have a business opportunity?</h3>
         <p>We welcome enquiries from prospective clients, suppliers, investors and partners who share an interest in responsible business and long-term growth.</p>
-        <a class="btn btn-gold" href="mailto:cropviewinvestment@info.zm?subject=Business%20Enquiry%20-%20Cropview%20Investments%20Limited">Send Us an Email</a>
+        <div class="buttons">
+          <a class="btn btn-gold" href="mailto:cropviewinvestment@info.zm?subject=Business%20Enquiry%20-%20Cropview%20Investments%20Limited">Send Us an Email</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/260974560984?text=Hello%20Cropview%20Investments%20Limited%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer">☏ Contact Us via WhatsApp</a>
+        </div>
       </div>
     </div>
   </div>
